@@ -1,10 +1,11 @@
-% Query to check if a bird can fly.
-can_fly(Bird) :-
-    bird(Bird, yes),
-    write(Bird), write(' can fly.'), nl.
-can_fly(Bird) :-
-    bird(Bird, no),
-    write(Bird), write(' cannot fly.'), nl.
-can_fly(Bird) :-
-    \+ bird(Bird, _),
-    write('Unknown bird: '), write(Bird), nl.
+bird(eagel).
+bird(sparrow).
+bird(snake).
+bird(tiger).
+can_fly(eagel).
+can_fly(sparrow).
+cannot_fly(snake).
+cannot_fly(tiger).
+fly(Bird):- can_fly(Bird), write(Bird), write('can fly.').
+fly(Bird):- cannot_fly(Bird), write(Bird), write('cannot fly.').
+fly(Bird):-\+bird(Bird), write(Bird), write('is not a bird.').
