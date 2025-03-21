@@ -1,25 +1,3 @@
-Aim:
-The aim of the program is to implement the Missionaries and Cannibals Puzzle, 
-where the goal is to transport three missionaries and three cannibals from the left side of the river to the right side using a boat under specific constraints.
-Algorithm:
-1. Initialization:
-Define the starting counts of missionaries (lM) and cannibals (lC) on the left side.
-Initialize counters for the right side (rM, rC) and track the number of moves (k).
-2. Game Loop:
-Continuously prompt the user for inputs to transport missionaries and cannibals across the river until either the goal state is achieved or a rule is violated.
-3. Left-to-Right Travel:
-Prompt the user to specify how many missionaries (uM) and cannibals (uC) to move from the left side to the right side.
-Validate the input:
-The boat cannot be empty.
-The total number of passengers cannot exceed two.
-There must be sufficient missionaries and cannibals on the left side to make the trip.
-Update the counts on both sides of the river and print the current state.
-Check for rule violations (e.g., cannibals outnumbering missionaries).
-Win Condition:
-The game is won if all missionaries and cannibals are safely transported to the right side (rM + rC == 6).
-6. Lose Condition:
-The game is lost if, at any point, cannibals outnumber missionaries on either side of the river.
-Code:
 print("\n")
 print("\tGame Start\nNow the task is to move all of them to right side of the river")
 print("rules:\n1. The boat can carry at most two people\n2. If cannibals num greater than missionaries then the cannibals would eat the missionaries\n3. The boat cannot cross the river by itself with no people on board")
