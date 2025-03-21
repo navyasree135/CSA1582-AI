@@ -1,22 +1,3 @@
-Aim:
-The aim of the code is to solve a cryptarithmetic puzzle, where letters in words represent unique digits. 
-The goal is to assign digits (0–9) to the letters such that a given arithmetic equation (e.g., SEND + MORE = MONEY) is satisfied.
-Steps in the Algorithm:
-Input and Preprocessing:
-Accept the list of words (words) and the result (result) as input.
-Extract all unique letters from the words and the result.
-If the number of unique letters exceeds 10 (more than available digits), declare the problem unsolvable.
-Generate Permutations:
-Generate all possible permutations of digits (0–9) for the unique letters using the itertools.permutations function.
-Each permutation represents a possible mapping of letters to digits.
-Mapping Letters to Digits:
-For each permutation, create a dictionary (mapping) where:
-The key is a unique letter.
-The value is the corresponding digit from the permutation.
-Output:
-If a valid mapping is found, return the mapping as the solution.
-If no valid mapping exists after exploring all permutations, return None.
-Code:
 print("cryptarthimetic")
 def is_solution_valid(mapping, words, result):
     # Convert words and result to integers based on the mapping
